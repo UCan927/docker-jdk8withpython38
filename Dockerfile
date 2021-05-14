@@ -10,5 +10,5 @@ RUN apt update && \
     make -j 8 && make altinstall && \
     cd .. && rm -rf ./Python-3.8.0* && \
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python3 get-pip.py && rm -rf ./get-pip.py && \
+    python3.8 get-pip.py && rm -rf ./get-pip.py && \
     pip3 install numpy scipy matplotlib
