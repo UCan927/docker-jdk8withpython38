@@ -11,4 +11,5 @@ RUN apt update && \
     cd .. && rm -rf ./Python-3.8.0* && \
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python3.8 get-pip.py && rm -rf ./get-pip.py && \
-    pip3 install numpy scipy matplotlib
+    pip3 install numpy scipy matplotlib && \
+    rm -f /usr/bin/python && ln -s /usr/local/bin/python3.8 /usr/bin/python
